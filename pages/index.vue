@@ -65,7 +65,14 @@ export default {
       this.$refs.fileInput.click()
     },
     handleChange(e) {
-      console.log(e)
+      // console.log(e)
+      const reader = new FileReader()
+
+      reader.readAsDataURL(e.target.files[0])
+
+      reader.onload = (onloadEvent) => {
+        this.setImage = onloadEvent.target.result
+      }
     },
     async handleUpload() {},
     copySvg() {},
