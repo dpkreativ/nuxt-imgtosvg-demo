@@ -61,7 +61,9 @@ export default {
     }
   },
   methods: {
-    handleRef() {},
+    handleRef() {
+      this.$refs.fileInput.click()
+    },
     handleChange(e) {
       console.log(e)
     },
