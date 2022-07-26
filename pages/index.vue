@@ -102,6 +102,8 @@ export default {
       } else {
         alert('Choose image first!')
       }
+
+      this.setUploadStatus = false
     },
     copySvg() {},
   },
