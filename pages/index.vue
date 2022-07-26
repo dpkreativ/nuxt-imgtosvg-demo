@@ -81,7 +81,7 @@ export default {
         // Upload image to Cloudinary
         const uploadImage = await this.$cloudinary
           .upload(this.setImage, {
-            upload_preset: 'ml_unsigned',
+            upload_preset: 'imgtosvg',
           })
           .then((res) => res.public_id)
 
