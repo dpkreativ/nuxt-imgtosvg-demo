@@ -50,6 +50,8 @@
 </template>
 
 <script>
+import formatter from 'html-formatter'
+
 export default {
   name: 'IndexPage',
   data() {
