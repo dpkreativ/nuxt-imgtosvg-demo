@@ -84,6 +84,14 @@ export default {
             upload_preset: 'ml_unsigned',
           })
           .then((res) => res.public_id)
+
+        // Convert to SVG
+        const url = await this.$cloudinary.image.url(uploadImage, {
+          format: 'svg',
+          effect: 'vectorize',
+        })
+
+        this.setImage = url
       } else {
         alert('Choose image first!')
       }
