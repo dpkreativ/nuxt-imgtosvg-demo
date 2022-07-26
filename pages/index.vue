@@ -105,7 +105,18 @@ export default {
 
       this.setUploadStatus = false
     },
-    copySvg() {},
+    copySvg() {
+      navigator.clipboard
+        .writeText(this.svgDisplay)
+        .then(() => {
+          this.clipboardStatus = 'Copied!'
+        })
+        .then(
+          setTimeout(() => {
+            this.clipboardStatus = 'Copy to Clipboard'
+          }, 2000)
+        )
+    },
   },
 }
 </script>
