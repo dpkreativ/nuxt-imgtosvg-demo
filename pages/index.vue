@@ -74,7 +74,20 @@ export default {
         this.setImage = onloadEvent.target.result
       }
     },
-    async handleUpload() {},
+    async handleUpload() {
+      this.setUploadStatus = true
+
+      if (this.setImage !== '') {
+        // Upload image to Cloudinary
+        const uploadImage = await this.$cloudinary
+          .upload(this.setImage, {
+            upload_preset: 'ml_unsigned',
+          })
+          .then((res) => res.public_id)
+      } else {
+        alert('Choose image first!')
+      }
+    },
     copySvg() {},
   },
 }
