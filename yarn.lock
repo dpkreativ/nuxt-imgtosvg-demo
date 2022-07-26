@@ -4409,6 +4409,11 @@ html-entities@^2.1.0:
   resolved "https://registry.yarnpkg.com/html-entities/-/html-entities-2.3.3.tgz#117d7626bece327fc8baace8868fa6f5ef856e46"
   integrity sha512-DV5Ln36z34NNTDgnz0EWGBLZENelNAtkiFA4kyNOG2tDI6Mz1uSWiq1wAKdyjnJwyDiDO7Fa2SO1CTxPXL8VxA==
 
+html-formatter@^0.1.9:
+  version "0.1.9"
+  resolved "https://registry.yarnpkg.com/html-formatter/-/html-formatter-0.1.9.tgz#58e8859712f3d4d9e7094027517c4c46f4c336b8"
+  integrity sha512-ao56oQHElDyKjnRara+Tw9iT6Ieuu6MRiBvCOCn2yhKtdT2Z9ViAyBal2j83bAf8sc6qAzGU0gkNVlFzkVAFHQ==
+
 html-minifier-terser@^5.0.1:
   version "5.1.1"
   resolved "https://registry.yarnpkg.com/html-minifier-terser/-/html-minifier-terser-5.1.1.tgz#922e96f1f3bb60832c2634b79884096389b1f054"
