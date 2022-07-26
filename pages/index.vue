@@ -92,6 +92,11 @@ export default {
         })
 
         this.setImage = url
+
+        // Extract SVG code
+        await this.$axios
+          .$get(url)
+          .then((data) => (this.svgDisplay = formatter.render(data)))
       } else {
         alert('Choose image first!')
       }
