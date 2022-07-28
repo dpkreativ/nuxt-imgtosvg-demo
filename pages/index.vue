@@ -51,6 +51,7 @@
 
 <script>
 import formatter from 'html-formatter'
+import copy from 'copy-to-clipboard'
 
 export default {
   name: 'IndexPage',
@@ -106,16 +107,11 @@ export default {
       this.setUploadStatus = false
     },
     copySvg() {
-      navigator.clipboard
-        .writeText(this.svgDisplay)
-        .then(() => {
-          this.clipboardStatus = 'Copied!'
-        })
-        .then(
-          setTimeout(() => {
-            this.clipboardStatus = 'Copy to Clipboard'
-          }, 2000)
-        )
+      copy(this.svgDisplay)
+      this.clipboardStatus = 'Copied!'
+      setTimeout(() => {
+        this.clipboardStatus = 'Copy to Clipboard'
+      }, 2000)
     },
   },
 }
